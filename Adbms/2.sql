@@ -16,6 +16,4 @@
 -- SET SQL_SAFE_UPDATES=0;
 --   delete from departments where department_name='Shipping';
 -- SET SQL_SAFE_UPDATES=1;
-
-
--- select * from employees;
+-- select * from employees where dayname(hire_date)='thursday';
