@@ -1,9 +1,9 @@
 -- USE company;
 -- CREATE TABLE jobs(job_id INT PRIMARY KEY, job_title VARCHAR(25) NOT NULL, min_salary INT, max_salary INT);
 -- CREATE TABLE regions(region_id INT PRIMARY KEY, region_name VARCHAR(25) NOT NULL);
--- CREATE TABLE countries(country_id INT PRIMARY KEY, country_name VARCHAR(25) NOT NULL, region_id INT, FOREIGN KEY (region_id) REFERENCES regions(region_id));
+-- CREATE TABLE countries(country_id VARCHAR(25) PRIMARY KEY, country_name VARCHAR(25) NOT NULL, region_id INT, FOREIGN KEY (region_id) REFERENCES regions(region_id));
 -- CREATE TABLE locations(location_id INT PRIMARY KEY, street_address VARCHAR(25) NOT NULL, 
--- postal_code INT, city VARCHAR(25), state_province VARCHAR(25), country_id INT, FOREIGN KEY (country_id) REFERENCES countries(country_id));
+-- postal_code INT, city VARCHAR(25), state_province VARCHAR(25), country_id VARCHAR(25), FOREIGN KEY (country_id) REFERENCES countries(country_id));
 -- CREATE TABLE departments(department_id INT PRIMARY KEY, department_name VARCHAR(25) NOT NULL, location_id INT, 
 -- FOREIGN KEY(location_id) REFERENCES locations(location_id));
 -- CREATE TABLE employees(employee_id INT PRIMARY KEY, first_name VARCHAR(25) NOT NULL, last_name VARCHAR(25) NOT NULL,
@@ -14,18 +14,11 @@
 -- employee_id INT, FOREIGN KEY(employee_id) REFERENCES employees(employee_id));
 -- ALTER TABLE departments RENAME TO dept;
 -- ALTER TABLE employees MODIFY COLUMN salary SMALLINT;
--- ALTER TABLE employees ADD COLUMN commision INT;
 -- desc employees;
 -- ALTER TABLE dept RENAME TO departments;
--- ALTER TABLE employees DROP COLUMN commission;
 -- INSERT INTO regions(region_id,region_name) VALUES (1,'Europe');
 -- INSERT INTO regions(region_id,region_name) VALUES (2,'Americas'); INSERT INTO regions(region_id,region_name) VALUES (3,'Asia');
 -- INSERT INTO regions(region_id,region_name) VALUES (4,'Middle East and Africa');
--- SELECT CONSTRAINT_NAME FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE WHERE TABLE_NAME = 'locations' AND COLUMN_NAME = 'country_id';
--- ALTER TABLE locations DROP FOREIGN KEY locations_ibfk_1;
--- ALTER TABLE countries MODIFY COLUMN country_id VARCHAR(25);
--- ALTER TABLE locations MODIFY COLUMN country_id VARCHAR(25);
--- ALTER TABLE locations ADD FOREIGN KEY (country_id) REFERENCES countries(country_id);
 -- desc locations;
 -- select * from regions;
 -- INSERT INTO countries(country_id,country_name,region_id) VALUES
