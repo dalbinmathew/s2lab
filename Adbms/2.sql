@@ -3,7 +3,7 @@
 -- select first_name, last_name, email, phone_number from employees
 -- select * from employees where last_name='Fay';
 -- select hire_date from employees where last_name='Grant' or last_name='Whalen';
--- select * from employees where job_id=17;
+-- SELECT e.first_name, e.last_name FROM employees e JOIN jobs j ON e.job_id = j.job_id WHERE j.job_title = 'Sales Representative';
 -- select * from employees where department_id=8;
 -- select department_name from departments order by department_name desc;
 -- select first_name, last_name from employees where last_name like 'k%';
@@ -17,3 +17,4 @@
 --   delete from departments where department_name='Shipping';
 -- SET SQL_SAFE_UPDATES=1;
 -- select * from employees where dayname(hire_date)='thursday';
+-- select * from employees;
