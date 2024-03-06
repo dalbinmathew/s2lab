@@ -16,3 +16,4 @@
 -- create table Prerequisite(Course_number varchar(25), Prerequisite_number varchar(25), foreign key(Course_number) references Course(Course_number),
 -- foreign key(Prerequisite_number) references Course(Course_number), primary key(Course_number, Prerequisite_number));
 -- insert into Prerequisite values('CS3380','CS3320'),('CS3380','MATH2410'),('CS3320','CS1310');
+select s.Name, s.Student_number, g.Grade, c.Course_name from Student s, Grade_Report g, Course c where ;
