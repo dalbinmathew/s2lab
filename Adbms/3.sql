@@ -17,6 +17,12 @@
 -- foreign key(Prerequisite_number) references Course(Course_number), primary key(Course_number, Prerequisite_number));
 -- insert into Prerequisite values('CS3380','CS3320'),('CS3380','MATH2410'),('CS3320','CS1310');
 -- select s.Name, s.Student_number, g.Grade, g.Section_identifier, c.Course_name, se.Course_number from Student s, Grade_Report g, Course c, Section se where ;
-select s.Name, s.Student_number, g.Grade, c.Course_name from Student s
-INNER JOIN Grade_Report g ON s.Student_number = g.Student_number INNER JOIN Section se ON 
-g.Section_identifier = se.Section_identifier INNER JOIN Course c ON c.Course_number = se.Course_number WHERE s.Name="Smith";
+-- select s.Name, s.Student_number, g.Grade, c.Course_name from Student s
+-- INNER JOIN Grade_Report g ON s.Student_number = g.Student_number INNER JOIN Section se ON 
+-- g.Section_identifier = se.Section_identifier INNER JOIN Course c ON c.Course_number = se.Course_number WHERE s.Name="Smith";
+
+-- select s.Name, g.Grade from Course c INNER JOIN Section se ON c.Course_number = se.Course_number
+--  INNER JOIN Grade_Report g ON se.Section_identifier = g.Section_identifier INNER JOIN Student s ON 
+-- g.Student_number = s.Student_number WHERE c.Course_name="Database" AND se.Semester = "Fall" AND se.Year = 08;
+
+
