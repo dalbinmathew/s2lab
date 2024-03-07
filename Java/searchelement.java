@@ -1,7 +1,8 @@
 import java.util.Scanner;
-public class symmetricmatrix {
-    public static void main(String args[]){  
-        boolean flag = true;  
+
+public class searchelement {
+        public static void main(String args[]){   
+            boolean flag = false;
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the number of rows: ");
@@ -20,28 +21,23 @@ public class symmetricmatrix {
         }
     
               
-        int c[][]=new int[rows][columns];
-            
+        System.out.println("Enter the elements to search: ");
+        int x = scanner.nextInt();
           
-        for(int i=0;i<columns;i++){    
-        for(int j=0;j<rows;j++){    
-            c[j][i] = a[i][j];    
-        }       
-        }   
         
         for(int i=0;i<columns;i++){    
             for(int j=0;j<rows;j++){    
-                if(a[i][j] != c[i][j]){    
-                    flag = false;    
-                    break;    
-                }    
+                if(a[i][j] == x){    
+                    flag = true;    
+                    break;  
+                } 
             }       
-            } 
+            }  
 
             if(flag)    
-            System.out.println("Matrices are symmetric");    
+            System.out.println("element is present in the matrix");    
         else    
-            System.out.println("Matrices are not symmetric");        
+            System.out.println("element is not present in the matrix");     
 
 }
 }
