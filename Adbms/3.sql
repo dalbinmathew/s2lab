@@ -25,4 +25,13 @@
 --  INNER JOIN Grade_Report g ON se.Section_identifier = g.Section_identifier INNER JOIN Student s ON 
 -- g.Student_number = s.Student_number WHERE c.Course_name="Database" AND se.Semester = "Fall" AND se.Year = 08;
 
-
+-- select c.Course_name from Prerequisite p INNER JOIN Course c ON p.Course_number = c.Course_number 
+-- WHERE c.Course_name = "Database";
+-- use university;
+-- call factorial;
+-- call in_fact(7);
+-- call getstudentdata;
+-- call oddeven(57);
+-- call grade('e');
+-- call pnz(34);
+-- call dateday('1994-12-31');
