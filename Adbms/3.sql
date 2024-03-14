@@ -61,17 +61,3 @@
 -- create view stud as select Name from student where major="CS";
 
 -- select * from stud;
-
-
-
-
-
-
-
--- call factorial;
--- call in_fact(7);
--- call getstudentdata;
--- call oddeven(57);
--- call grade('e');
--- call pnz(34);
--- call dateday('1994-12-31');
