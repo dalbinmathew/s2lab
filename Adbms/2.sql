@@ -4,7 +4,7 @@
 -- select * from employees where last_name='Fay';
 -- select hire_date from employees where last_name='Grant' or last_name='Whalen';
 -- SELECT e.first_name, e.last_name FROM employees e JOIN jobs j ON e.job_id = j.job_id WHERE j.job_title = 'Sales Representative';
--- select * from employees where department_id=8;
+-- select * from employees where department_id=8;	
 -- select department_name from departments order by department_name desc;
 -- select first_name, last_name from employees where last_name like 'k%';
 -- select first_name, last_name from employees where hire_date between '1994-12-31' and '1997-01-01';
