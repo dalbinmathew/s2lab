@@ -3,6 +3,7 @@
 -- create table product (pdtid int primary key, pname varchar(50), price int, quantity int);
 -- call insertproduct(1,"choclate",100,2);
 -- call insertproduct(1,"rice",0,2);
+-- call insertproduct(2,"rice",5,0);
 
 -- procedure
 

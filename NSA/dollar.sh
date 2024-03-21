@@ -1,0 +1,7 @@
+echo "my script name is $0"
+echo "my first argument is $1, my second argument is $2 and my third argument is $3"
+echo "PID is $$"
+echo "Total no of arguments $#"
+echo "all arguments $*"
+echo "all arguments as seperate words $@"
+echo "last return code $?"
