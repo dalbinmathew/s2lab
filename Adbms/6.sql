@@ -26,3 +26,7 @@ show triggers;
 insert into saleitem values(101,001,1);
 insert into saleitem values(101,002,3);
 select * from saleitem;
+select * from sale;
+update product set qtyinstock = 100 where pdtid = 101;
+update product set qtyinstock = 100 where pdtid = 102;
+truncate table saleitem;
