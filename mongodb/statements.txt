@@ -6,5 +6,10 @@ db.studlist.find({gender:"male",grade:"A+"},{name:1,_id:0})
 db.studlist.find({course:"Mechanical"},{name:1,_id:0}).sort({mark:-1}).limit(3)
 db.studlist.find({gender:"female",mark:{$gt:90}},{grade:1,phone:1,mark:1,name:1,_id:0})
 db.studlist.find({mark:{$gt:80, $lt:90}},{})
+db.studlist.find({"name.fname":{$regex: /^V/ }})
+db.studlist.find({"address.city":"Kollam"},{})
+db.studlist.find({"address.city":{$ne: "Kollam"}, "address.city":{$ne: "Thiruvananthapuram"}},{})
+db.studlist.find({gender:"female",$or:[{"address.city":"Kollam"},{"address.city":"Thiruvananthapuram"}]},{})
+
 
 
