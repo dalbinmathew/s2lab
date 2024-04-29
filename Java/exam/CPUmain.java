@@ -6,8 +6,8 @@ class CPU {
         String manufacturer;
 
         Processor(int cores, String manufacturer) {
-            cores = cores;
-            manufacturer = manufacturer;
+            this.cores = cores;
+            this.manufacturer = manufacturer;
         }
 
         public String toString() {
@@ -20,8 +20,8 @@ class CPU {
         String manufacturer;
 
         RAM(int memory, String manufacturer) {
-            memory = memory;
-            manufacturer = manufacturer;
+            this.memory = memory;
+            this.manufacturer = manufacturer;
         }
 
         public String toString() {
